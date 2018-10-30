@@ -98,6 +98,10 @@ header{
 header nav {
   padding:0;
 }
+
+nav li{
+  padding-left: 0;
+}
 }
 
 
@@ -125,6 +129,33 @@ header nav {
 .left-column video{
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width:1200px){
+  .banner{
+    flex-flow:column;
+  }
+
+  .left-column{
+    width:100%;
+    padding:0px;
+  }
+
+  .banner .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .button{
+    width: 30px;
+    padding: 1rem;
+  }
+
+  .left-column h3, p{
+    padding-left: 1rem;
+  }
 }
 
 .content{
@@ -164,11 +195,6 @@ padding:1rem;
   padding: 1rem 24px;
 }
 
-@media only screen and (max-width:1200px){
-  .banner{
-    flex-flow:column;
-  }
-}
 
 .feature{
   padding:0;
@@ -184,11 +210,68 @@ padding:1rem;
   width:35%;
   height: auto;
   padding-right: 1rem;
+  margin-right:16px;
 }
 
 .feature .image-container img{
-  width: 100%;
+
   padding-top: 16px;
+  margin-right: 16px;
+}
+
+.feature .image-container-mobile img{
+display: none;
+}
+
+.course-list{
+  display:none;
+}
+
+.course-type{
+  background-color: rgb(200,200,200);
+  color: rgb(100,100,100);
+}
+
+@media only screen and (max-width:1200px){
+  .information{
+    flex-flow: column;
+  }
+
+  .right-column{
+    width:100%;
+    padding: 0;
+  }
+
+  .feature{
+    flex-flow: column;
+  }
+
+  .image-container{
+    display:none;
+  }
+
+  .image-container-mobile img{
+    display: block;
+    width:100%;
+  }
+  .content{
+    padding:0.5rem;
+  }
+
+.course{
+  display: none;
+}
+
+.course-list{
+  display: flex;
+  flex-direction: column;
+
+}
+.course-type{
+padding: 1rem;
+margin: 0.5rem;
+}
+
 }
 
 .start-learning{
@@ -242,6 +325,33 @@ padding:1rem;
 
     font-size: 3rem;
 }
+
+@media only screen and (max-width:1200px){
+  .start-learning{
+      padding:1rem;
+    }
+
+    .right-column{
+      display:none;
+    }
+
+    .left-column{
+      width:100%;
+    }
+
+.exhibition-heading{
+  display:none;
+}
+
+ .terms{
+      display:none;
+    }
+
+  footer.logo{
+    display: flex;
+  }
+  }
+
 
 footer{
   border-top: 1px solid grey;
